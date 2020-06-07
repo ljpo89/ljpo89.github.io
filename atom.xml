@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>人生就像一盒巧克力，你不知道下一个会尝到什么味道</title>
+  <icon>http://ljpo89.github.io/icon.png</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ljpo89.github.io/"/>
+  <updated>2020-06-07T11:10:03.898Z</updated>
+  <id>http://ljpo89.github.io/</id>
+  
+  <author>
+    <name>木扣</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你是幸福的，只是你还不知道</title>
+    <link href="http://ljpo89.github.io/2020/05/25/hello-world/"/>
+    <id>http://ljpo89.github.io/2020/05/25/hello-world/</id>
+    <published>2020-05-25T14:00:30.867Z</published>
+    <updated>2020-06-07T11:10:03.898Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
