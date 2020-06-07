@@ -74,17 +74,6 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
     <a href="/friends" class="waves-effect waves-light">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
@@ -144,17 +133,6 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
 		<a href="/friends" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-address-book"></i>
@@ -198,7 +176,7 @@
                         typeSpeed: 100,
                         loop: true,
                         backSpeed: 50,
-                        showCursor: false
+                        showCursor: true
                     });
                 </script>
                 
@@ -210,7 +188,8 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -496,14 +475,29 @@
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
         font-size: 15px;
         color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
     }
 
     
@@ -516,11 +510,11 @@
                    type="playlist"
                    id="3183888119"
                    fixed='true'
-                   autoplay='true'
+                   autoplay='false'
                    theme='#42b983'
                    loop='all'
-                   order='list'
-                   preload='metadata'
+                   order='random'
+                   preload='auto'
                    volume='0.7'
                    list-folded='true'
         >
@@ -536,8 +530,8 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="http://ljpo89.github.io" target="_blank">木扣</a>
-<!--            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Github</a>-->
+            <a href="/about" target="_blank">木扣</a>
+<!--            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>-->
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">多元智慧</a>
 <!--            <br>-->
             
@@ -562,7 +556,7 @@
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis"><!---->
+        <div class="col s12 m4 l4 social-link social-statis">
 
 
     <a href="mailto:1141499925@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
@@ -570,9 +564,9 @@
     </a>
 
 
-<!---->
 
-<!---->
+
+
 
 
     <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1141499925" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1141499925" data-position="top" data-delay="50">
@@ -580,11 +574,11 @@
     </a>
 
 
-<!---->
 
-<!---->
 
-<!---->
+
+
+
 </div>
     </div>
 </footer>
